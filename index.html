@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Homepage!</title>
+    <style>
+        body {
+            background-color: #004d00;
+            font-family: "Comic Sans MS", "Arial", sans-serif;
+            color: #FFFF00;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .sparkle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkleAnim 2s infinite;
+            box-shadow: 0 0 6px #00ff00;
+        }
+        
+        @keyframes sparkleAnim {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #C0C0C0;
+            border: 5px ridge #808080;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FF00FF;
+            font-size: 48px;
+            text-shadow: 2px 2px #000000;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        
+        h2 {
+            color: #0000FF;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            padding: 10px;
+            text-align: center;
+            border: 3px dotted #000000;
+        }
+        
+        .marquee {
+            background-color: #FFFF00;
+            color: #FF0000;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            border: 3px solid #000000;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .marquee span {
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+        }
+        
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        
+        .content {
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 20px;
+            margin: 20px 0;
+            border: 3px groove #808080;
+        }
+        
+        .divider {
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            margin: 20px 0;
+        }
+        
+        .construction {
+            text-align: center;
+            background-color: #FFFF00;
+            color: #FF0000;
+            padding: 15px;
+            border: 5px dashed #000000;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .counter {
+            text-align: center;
+            background-color: #000000;
+            color: #00FF00;
+            padding: 10px;
+            font-family: "Courier New", monospace;
+            border: 3px solid #00FF00;
+            margin: 20px 0;
+        }
+        
+        a {
+            color: #0000FF;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: #800080;
+        }
+        
+        a:hover {
+            color: #FF0000;
+            text-decoration: underline;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(180deg, #FFFFFF, #C0C0C0);
+            border: 3px outset #808080;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        .button:active {
+            border-style: inset;
+        }
+        
+        .webring {
+            text-align: center;
+            background-color: #000080;
+            color: #FFFFFF;
+            padding: 15px;
+            border: 3px double #FFFFFF;
+            margin: 20px 0;
+        }
+        
+        .flame {
+            display: inline-block;
+            animation: flicker 0.5s infinite;
+        }
+        
+        @keyframes flicker {
+            0%, 100% { color: #FF0000; }
+            50% { color: #FFFF00; }
+        }
+        
+        ul {
+            list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><circle cx="6" cy="6" r="5" fill="%23FF0000"/></svg>');
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Create sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        
+        setInterval(createSparkle, 100);
+    </script>
+    
+    <div class="container">
+        <h1>🌟 WELCOME TO MY HOMEPAGE! 🌟</h1>
+        
+        <div class="marquee">
+            <span>★★★ YOU ARE VISITOR NUMBER 999,999! ★★★ THANKS FOR STOPPING BY! ★★★ SIGN MY GUESTBOOK! ★★★</span>
+        </div>
+        
+        <div class="construction">
+            🚧 UNDER CONSTRUCTION 🚧
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="content">
+            <h2>About Me</h2>
+            <p><strong>Name:</strong> Hiro Protagonist</p>
+            <p><strong>Location:</strong> "U-Stor-It" facility / The Black Sun</p>
+            <p><strong>Interests:</strong></p>
+            <ul>
+                <li>Making cool websites</li>
+                <li>Collecting animated rotating cat GIFs</li>
+                <li>Surfing the metaverse</li>
+                <li>Delivering pizza</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="content">
+            <h2><span class="flame">🔥</span> Rotating Cats <span class="flame">🔥</span></h2>
+            <p style="text-align: center;">
+                <img id="catGif" src="cat.gif" alt="Rotating Cat" style="max-width: 100%; height: auto; border: 5px solid #FF00FF;">
+            </p>
+            <p style="text-align: center; font-size: 12px; color: #666;">
+                <em>cat1.gif</em>
+            </p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="content">
+            <h2>What's New?</h2>
+            <p><strong>01/18/2026:</strong> Added new animated background!</p>
+            <p><strong>01/15/2026:</strong> Updated my favorite links section!</p>
+            <p><strong>01/10/2026:</strong> Created this AMAZING homepage!</p>
+        </div>
+        
+        <div class="counter">
+            You are visitor number: <span style="font-size: 24px; color: #FFFF00;">⚡ 123,456 ⚡</span>
+        </div>
+        
+        <div class="webring">
+            <p>This site is part of the <strong>AWESOME WEBRING</strong></p>
+            <a href="#" style="color: #00FFFF;">&lt;&lt; Previous</a> | 
+            <a href="#" style="color: #00FF00;">Random</a> | 
+            <a href="#" style="color: #00FFFF;">Next &gt;&gt;</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px; color: #000000;">
+            <p><strong>Best viewed in Netscape Navigator 4.0 at 800x600 resolution</strong></p>
+            <p style="font-size: 12px;">© 1995 MrSumOne - All rights reserved</p>
+            <p style="font-size: 10px;">Last updated: January 18, 1995</p>
+        </div>
+    </div>
+</body>
+</html>
