@@ -172,19 +172,6 @@
 </head>
 <body>
     <script>
-        // Visitor counter using CountAPI (free, no signup needed)
-        fetch('https://api.countapi.xyz/hit/mrsumone.com/visits')
-            .then(response => response.json())
-            .then(data => {
-                // Add starting offset to make it look like you have more visitors
-                let displayCount = data.value + 12420; // This adds 10,000 to the count
-                document.getElementById('visitorCount').textContent = '⚡ ' + displayCount.toLocaleString() + ' ⚡';
-            })
-            .catch(error => {
-                // Fallback if API doesn't work
-                document.getElementById('visitorCount').textContent = '⚡ 10,542 ⚡';
-            });
-        
         // Create sparkles
         function createSparkle() {
             const sparkle = document.createElement('div');
@@ -247,8 +234,7 @@
         </div>
         
         <div class="counter">
-            You are visitor number: 
-            <span id="visitorCount" style="font-size: 24px; color: #FFFF00;">⚡ Loading... ⚡</span>
+            You are visitor number: <span style="font-size: 24px; color: #FFFF00;">⚡ 123,456 ⚡</span>
         </div>
         
         <div class="webring">
